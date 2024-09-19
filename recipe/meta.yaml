@@ -1,9 +1,5 @@
-{% set package = load_file_data('Cargo.toml').get('package', {}) %}
-{% set name = package.get("name") %}
-{% set version = package.get("version") %}
-{% set description = package.get("description") %}
-{% set homepage = package.get("homepage") %}
-{% set dev_url = package.get("repository") %}
+{% set name = "ssubmit" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -27,13 +23,13 @@ requirements:
 
 test:
   commands:
-    - {{ name }} --help
+    - ssubmit --help
 
 about:
-  home: {{ homepage }}
-  dev_url: {{ dev_url }}
+  home: https://github.com/mbhall88/{{ name }}
   summary: 'Submit slurm sbatch jobs without a script'
-  description: {{ description }}
+  description: |
+    Submit slurm sbatch jobs without a script 
   license: Unlicense
   license_file: 
     - LICENSE
