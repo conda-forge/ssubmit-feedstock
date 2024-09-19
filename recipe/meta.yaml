@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/mbhall88/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  url: https://crates.io/api/v1/crates/{{ name }}/{{ version }}/download
   sha256: da6379d478b817cefce625d783f946884e035edbf1d4c11727d3f9d86756def9
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
