@@ -1,5 +1,5 @@
 {% set name = "ssubmit" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://crates.io/api/v1/crates/{{ name }}/{{ version }}/download
   fn: "{{ name }}-{{ version }}.tar.gz"
-  sha256: b6c27ca251688a99aede769264cde461c086793d4d0a0e9dfda7eb62ca8d4c42
+  sha256: 86d16a22eb0ff3f50304f5c6abe37d8835e55fcd6c91f0014beb488b5f1708b2
 
 build:
   number: 0
